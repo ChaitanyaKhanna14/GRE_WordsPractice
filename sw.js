@@ -1,6 +1,6 @@
 // Minimal offline cache. Only active when the site is served over http(s), e.g. GitHub Pages.
-const CACHE = 'gre-words-v1';
-const FILES = ['./', './index.html', './styles.css', './app.js', './data.js', './manifest.json'];
+const CACHE = 'gre-words-v2';
+const FILES = ['./', './index.html', './styles.css', './app.js', './data.js', './manifest.json', './icons/icon-192.png', './icons/icon-512.png', './icons/apple-touch-icon.png', './icons/favicon-32.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting()));
 });
